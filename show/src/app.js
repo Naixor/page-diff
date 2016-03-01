@@ -1,0 +1,1 @@
+var showDiff = angular.module('ShowDiff', []);

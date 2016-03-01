@@ -1,0 +1,19 @@
+{
+  "name": "page-diff",
+  "version": "0.0.1",
+  "description": "base on phantomjs, compare with dom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "promise": "7.1.1"
+  },
+  "keywords": [
+    "pagediff",
+    "domdiff",
+    "phantomjs"
+  ],
+  "author": "Naixor (hongyesoftware@gmail.com)",
+  "license": "ISC"
+}

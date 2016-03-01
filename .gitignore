@@ -1,0 +1,7 @@
+show/bower_components/**
+node_modules/**
+*.png
+r.json
+doms.json
+exrror.txt
+diff_test.js

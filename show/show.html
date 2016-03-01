@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Diff Show</title>
+    <link rel="stylesheet" href="src/stylesheets/main.css">
+</head>
+<body ng-app="ShowDiffApp" ng-controller="stageController">
+    <stage></stage>
+</body>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="src/app.js"></script>
+<!-- directives -->
+<script src="src/directives/diffs/diffs.ctrl.js"></script>
+<script src="src/directives/imgStage/imgStage.ctrl.js"></script>
+<script src="src/directives/stage/stage.ctrl.js"></script>
+<script>
+    angular.module('ShowDiffApp', ['ShowDiff'])
+    .controller('stageController', ['$scope', '$http', 
+        function ($scope, $http) {
+            $scope.leftImg = 'f221817f3efe424cac72a50a1fa93d34.png';
+            $scope.rightImg = 'fee2959f4fc9574f296e99e19093d7f5.png';
+            $http.get('r.json').then(function success(response) {
+                $scope.diffInfo = response.data;
+            }, function fail(response) {
+                
+            });
+        }
+    ]);
+</script>
+</html>
